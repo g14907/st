@@ -1,7 +1,6 @@
 package jp.tuyano;
  
 import java.io.IOException;
-import java.net.URL;
 import java.util.*;
  
 import javax.jdo.*;
@@ -35,6 +34,6 @@ public class OrderServlet extends HttpServlet {
         } finally {
             manager.close();
         }
-        resp.sendRedirect("/kanryou.html");
+        resp.sendRedirect("/check.html");
     }
 }

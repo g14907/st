@@ -1,6 +1,5 @@
 package jp.tuyano;
  
-import java.net.URL;
 import java.util.Date;
  
 import javax.jdo.annotations.*;

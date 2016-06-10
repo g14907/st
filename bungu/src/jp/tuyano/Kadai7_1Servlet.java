@@ -8,7 +8,8 @@ import javax.servlet.http.*;
  
 @SuppressWarnings("serial")
 public class Kadai7_1Servlet extends HttpServlet {
-    public void doGet(HttpServletRequest req,
+    @SuppressWarnings("unchecked")
+	public void doGet(HttpServletRequest req,
             HttpServletResponse resp)
             throws IOException {
         PersistenceManagerFactory factory = PMF.get();
@@ -27,7 +28,7 @@ public class Kadai7_1Servlet extends HttpServlet {
        } else {
             try {
                 LinkData data = (LinkData)manager.getObjectById(LinkData.class,Long.parseLong(param1));
-                list = new ArrayList();
+                list = new ArrayList<LinkData>();
                 list.add(data);
             } catch(JDOObjectNotFoundException e){}
       }

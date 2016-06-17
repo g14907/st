@@ -35,7 +35,7 @@ public class Kadai7_1Servlet extends HttpServlet {
         String res = "[";
         if (list != null){
             for(LinkData data:list){
-                res += "{myform:" + data.getMyform() + ",goukei:'" + data.getGoukei() + "',date:'" + data.getDatetime() +
+                res += "{id:" + data.getId() + ",st:'" + data.getSt() + "',goukei:'" + data.getGoukei() + "',date:'" + data.getDatetime() +
                     "'},";
             }
         }

@@ -15,11 +15,11 @@
 <!--
 function calc_total(){
   kingaku = 0;
-  for (i=0; i<document.myform.length-1; i++){
-    if (document.myform.elements[i].checked){
-      kingaku += eval(document.myform.elements[i].value);
-    }
-  }
+  if (document.myform.elements[0].checked) kingaku += 100;
+  if (document.myform.elements[1].checked) kingaku += 100;
+  if (document.myform.elements[2].checked) kingaku += 100;
+  if (document.myform.elements[3].checked) kingaku += 500;
+  if (document.myform.elements[4].checked) kingaku += 200;
   document.myform.goukei.value = kingaku + "　円";
 }
 //-->
@@ -31,31 +31,31 @@ function calc_total(){
 		<table border=2 cellpadding=4>
 			<tr>
 				<td><h2>
-						<input type="checkbox" value="100" onClick="calc_total()">
+						<input type="checkbox" value="えんぴつ" name="product" onClick="calc_total()">
 						えんぴつ（100円）
 					</h2></td>
 			</tr>
 			<tr>
 				<td><h2>
-						<input type="checkbox" value="100" onClick="calc_total()">
+						<input type="checkbox" value="消しゴム" name="product" onClick="calc_total()">
 						消しゴム（100円）
 					</h2></td>
 			</tr>
 			<tr>
 				<td><h2>
-						<input type="checkbox" value="100" onClick="calc_total()">
+						<input type="checkbox" value="ボールペン" name="product" onClick="calc_total()">
 						ボールペン（100円）
 					</h2></td>
 			</tr>
 			<tr>
 				<td><h2>
-						<input type="checkbox" value="500" onClick="calc_total()">
+						<input type="checkbox" value="定規セット" name="product" onClick="calc_total()">
 						定規セット（500円）
 					</h2></td>
 			</tr>
 			<tr>
 				<td><h2>
-						<input type="checkbox" value="200" onClick="calc_total()">
+						<input type="checkbox" value="コンパス" name="product" onClick="calc_total()">
 						コンパス（200円）
 					</h2></td>
 			</tr>
@@ -66,9 +66,11 @@ function calc_total(){
 			</tr>
 		</table>
 		<div>
-			<input type="submit" value="注文">  <input type="reset" value="リセット">
+			<input type="submit" value="注文" onClick=>  <input type="reset" value="リセット">
 		</div>
 	</form>
+	<a href="record.html">履歴</a>
+	<a href="/LogoutServlet">ログアウト</a>
 </body>
 </html>
 

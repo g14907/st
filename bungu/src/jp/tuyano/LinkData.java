@@ -11,7 +11,7 @@ public class LinkData {
     private Long id;
      
     @Persistent
-    private String myform;
+    private String st; //注文した全部の商品
     
     @Persistent
     private String goukei;
@@ -19,18 +19,25 @@ public class LinkData {
     @Persistent
     private Date datetime;
 
-    public LinkData(String myform, String goukei,Date datetime) {
+    public LinkData(String st, String goukei,Date datetime) {
         super();
-        this.myform = myform;
+        this.st = st;
+        this.goukei = goukei;
         this.datetime = datetime;
     }
- 
-    public Long getMyform() {
+    public Long getId() {
         return id;
     }
+	public void setId(Long id) {
+		this.id = id;
+	}
  
-    public void setMyform(String myform) {
-        this.myform = myform;
+    public String getSt() {
+        return st;
+    }
+ 
+    public void setSt(String st) {
+        this.st = st;
     }
  
     public String getGoukei() {
